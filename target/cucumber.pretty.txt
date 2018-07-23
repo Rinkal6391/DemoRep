@@ -1,0 +1,77 @@
+@tag
+Feature: Free CRM create a contact
+
+  @tag1
+  Scenario Outline: Free CRM create a contact Scenario                      [90m# contact.feature:5[0m
+    [36mGiven [0m[36muser is present in login page[0m
+    [36mWhen [0m[36mtitle of login page is Free CRM[0m
+    [36mThen [0m[36muser enters "<username>" and "<password>"[0m
+    [36mThen [0m[36muser clicks on login button[0m
+    [36mThen [0m[36muser is on home page[0m
+    [36mThen [0m[36muser move to new contact page[0m
+    [36mThen [0m[36muser enter contact "<firstname>" and "<lastname>" and "<position>"[0m
+    [36mThen [0m[36mclose the browser[0m
+
+    Examples: 
+
+  @tag @tag1
+  Scenario Outline: Free CRM create a contact Scenario      [90m# contact.feature:18[0m
+    [36mGiven [0m[36muser is present in login page[0m                     [90m# LoginStepdefination.user_is_present_in_login_page()[0m
+    [36mWhen [0m[36mtitle of login page is Free CRM[0m                    [90m# LoginStepdefination.title_of_login_page_is_Free_CRM()[0m
+    [36mThen [0m[36muser enters "[0m[36m[1mnaveenk[0m[36m" and "[0m[36m[1mtest@123[0m[36m"[0m               [90m# LoginStepdefination.user_enters_username_and_password(String,String)[0m
+    [36mThen [0m[36muser clicks on login button[0m                        [90m# LoginStepdefination.user_clicks_on_login_button()[0m
+    [36mThen [0m[36muser is on home page[0m                               [90m# LoginStepdefination.user_on_home_page()[0m
+    [36mThen [0m[36muser move to new contact page[0m                      [90m# LoginStepdefination.user_move_to_new_contact_page()[0m
+    [36mThen [0m[36muser enter contact "[0m[36m[1mTom[0m[36m" and "[0m[36m[1mpeter[0m[36m" and "[0m[36m[1mmanager[0m[36m"[0m [90m# LoginStepdefination.user_enter_and_and(String,String,String)[0m
+    [36mThen [0m[36mclose the browser[0m                                  [90m# LoginStepdefination.close_the_browser()[0m
+
+  @tag @tag1
+  Scenario Outline: Free CRM create a contact Scenario           [90m# contact.feature:19[0m
+    [36mGiven [0m[36muser is present in login page[0m                          [90m# LoginStepdefination.user_is_present_in_login_page()[0m
+    [36mWhen [0m[36mtitle of login page is Free CRM[0m                         [90m# LoginStepdefination.title_of_login_page_is_Free_CRM()[0m
+    [36mThen [0m[36muser enters "[0m[36m[1mJammy[0m[36m" and "[0m[36m[1mtest@234[0m[36m"[0m                      [90m# LoginStepdefination.user_enters_username_and_password(String,String)[0m
+    [36mThen [0m[36muser clicks on login button[0m                             [90m# LoginStepdefination.user_clicks_on_login_button()[0m
+    [36mThen [0m[36muser is on home page[0m                                    [90m# LoginStepdefination.user_on_home_page()[0m
+    [36mThen [0m[36muser move to new contact page[0m                           [90m# LoginStepdefination.user_move_to_new_contact_page()[0m
+    [36mThen [0m[36muser enter contact "[0m[36m[1mgeourge[0m[36m" and "[0m[36m[1msaini[0m[36m" and "[0m[36m[1mDirector[0m[36m"[0m [90m# LoginStepdefination.user_enter_and_and(String,String,String)[0m
+    [36mThen [0m[36mclose the browser[0m                                       [90m# LoginStepdefination.close_the_browser()[0m
+#Feature: Free CRM login feature
+#data drien testing without using example keyword.
+#Scenario: Free CRM login Test Scenario
+#Given user is present in login page
+#When title of login page is Free CRM
+# Then user enters "naveenk" and "test@123"  --1. data driven testing without using example keyword
+#Then user clicks on login button
+#Then user is on home page
+#data driven testing using examples keyword and scenario outline.
+Feature: Free CRM login feature
+
+  Scenario Outline: Free CRM login Test Scenario   [90m# login.feature:12[0m
+    [36mGiven [0m[36muser is present in login page[0m
+    [36mWhen [0m[36mtitle of login page is Free CRM[0m
+    [36mThen [0m[36muser enters "<username>" and "<password>"[0m
+    [36mThen [0m[36muser clicks on login button[0m
+    [36mThen [0m[36muser is on home page[0m
+
+    Examples: 
+
+  Scenario Outline: Free CRM login Test Scenario [90m# login.feature:21[0m
+    [36mGiven [0m[36muser is present in login page[0m          [90m# LoginStepdefination.user_is_present_in_login_page()[0m
+    [36mWhen [0m[36mtitle of login page is Free CRM[0m         [90m# LoginStepdefination.title_of_login_page_is_Free_CRM()[0m
+    [36mThen [0m[36muser enters "[0m[36m[1mnaveenk[0m[36m" and "[0m[36m[1mtest@123[0m[36m"[0m    [90m# LoginStepdefination.user_enters_username_and_password(String,String)[0m
+    [36mThen [0m[36muser clicks on login button[0m             [90m# LoginStepdefination.user_clicks_on_login_button()[0m
+    [36mThen [0m[36muser is on home page[0m                    [90m# LoginStepdefination.user_on_home_page()[0m
+
+  Scenario Outline: Free CRM login Test Scenario [90m# login.feature:22[0m
+    [36mGiven [0m[36muser is present in login page[0m          [90m# LoginStepdefination.user_is_present_in_login_page()[0m
+    [36mWhen [0m[36mtitle of login page is Free CRM[0m         [90m# LoginStepdefination.title_of_login_page_is_Free_CRM()[0m
+    [36mThen [0m[36muser enters "[0m[36m[1mtom[0m[36m" and "[0m[36m[1mtest@234[0m[36m"[0m        [90m# LoginStepdefination.user_enters_username_and_password(String,String)[0m
+    [36mThen [0m[36muser clicks on login button[0m             [90m# LoginStepdefination.user_clicks_on_login_button()[0m
+    [36mThen [0m[36muser is on home page[0m                    [90m# LoginStepdefination.user_on_home_page()[0m
+
+  Scenario Outline: Free CRM login Test Scenario [90m# login.feature:23[0m
+    [36mGiven [0m[36muser is present in login page[0m          [90m# LoginStepdefination.user_is_present_in_login_page()[0m
+    [36mWhen [0m[36mtitle of login page is Free CRM[0m         [90m# LoginStepdefination.title_of_login_page_is_Free_CRM()[0m
+    [36mThen [0m[36muser enters "[0m[36m[1mjammy[0m[36m" and "[0m[36m[1mtest@345[0m[36m"[0m      [90m# LoginStepdefination.user_enters_username_and_password(String,String)[0m
+    [36mThen [0m[36muser clicks on login button[0m             [90m# LoginStepdefination.user_clicks_on_login_button()[0m
+    [36mThen [0m[36muser is on home page[0m                    [90m# LoginStepdefination.user_on_home_page()[0m
